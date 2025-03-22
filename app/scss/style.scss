@@ -4,7 +4,252 @@
 @import 'fonts';
 
 // start header
+.header {
+  // height: 40px;
+  padding: 10px 0;
+  // margin-top: 15px;
+  // border: 1px solid $white;
+  background-color: $background;
+  position: fixed;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 100px;
+  height: 48px;
+
+  // height: 100px;
+
+  position: relative;
+
+  img {
+    position: absolute;
+    top: -22px;
+    left: 5px;
+    width: 48px;
+    height: 100px;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 360px;
+  align-items: center;
+}
+
+.menu-list {
+  display: inline-block;
+  transition: all .3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &+.menu-list {
+    margin-left: 50px;
+  }
+}
+
+.menu-list__link-drop {
+  position: relative;
+  padding-right: 20px;
+
+
+  &::before {
+    position: absolute;
+    content: '';
+    // background-image: url('../images/icons/arrows-down.png');
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // width: 15px;
+    // height: 10px;
+
+    border: 7px solid transparent;
+    border-top: 8px solid $white;
+
+
+    top: 7px;
+    right: 0px;
+  }
+
+  &:hover {
+    &::before {
+      content: '';
+      border-top: 8px solid $yellow !important;
+    }
+  }
+}
+
+.menu-list__link-menu {
+  display: none;
+  position: absolute;
+  left: -20px;
+}
+
+.menu-list__link.menu-list__link-menu {
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.menu-list__link-drop {
+  position: relative;
+
+  &:hover {
+    .menu-list__link-menu {
+      display: block;
+      color: $white;
+      padding-top: 20px;
+      padding-left: 20px;
+      background-color: $background;
+    }
+  }
+}
+
+.menu-list__link-menu--link {
+  transition: all .3s;
+}
+
+.menu-list__link-menu--list {
+  width: 280px;
+  margin-bottom: 15px;
+
+  &:hover {
+    .menu-list__link-menu--link {
+      color: $yellow;
+    }
+  }
+}
+
+
+
+.social__wrapper {
+  margin-right: 20px;
+}
+
+.social__list {
+  padding-top: 3px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.social__list+.social__list {
+  margin-left: 20px;
+}
+
+.mobil-menu {
+  display: none;
+}
 
 // end header
+
+
+
+// start section main__screen
+.main__screen {
+  background-image: url('../images/content/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 90vh;
+  position: relative;
+  // margin-top: 150px;
+}
+
+.main__screen-shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // right: 30%;
+  z-index: 1;
+  background: linear-gradient(90deg, #302221 0%, rgba(48, 34, 33, 0.8) 25.82%, rgba(48, 34, 33, 0) 50%);
+}
+
+.main__screen-title {
+  font-size: 96px;
+  margin-top: 150px;
+  line-height: 96px;
+  margin-bottom: 30px;
+
+}
+
+.main__screen-subtitle {
+  font-size: 96px;
+  @extend %AlexSax;
+  margin-bottom: 20px;
+}
+
+.main__screen-instruments {
+  margin-bottom: 50px;
+}
+
+.main__screen-instruments--list {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 36px;
+  font-size: 18px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: 0px;
+    background-image: url('../images/icons/instruments-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 21px;
+    height: 30px;
+  }
+}
+
+
+// end section main__screen
+
+
+// start section main-offer
+.main-offer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+}
+
+.main-offer__item {
+  max-width: 50%;
+  width: 100%;
+}
+
+.main-offer__title {
+  color: $yellow;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.main-offer__text {
+  font-size: 24px;
+}
+
+// end section main-offer
 
 @import 'media';

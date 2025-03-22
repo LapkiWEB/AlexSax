@@ -1,12 +1,13 @@
 html,
 body {
     height: 100%;
-        //   @extend %AnPro-Regular;
-        //   color: $text;
+          @extend %MonstR;
+          color: $white;
+          font-size: 16px;
         // position: relative;
         // overflow-x: hidden;
         // margin: 0 auto;
-        //   background-color: $background;
+          background-color: $background;
 }
 .wrapper {
     display: flex;
@@ -22,11 +23,14 @@ body {
     flex: 0 0 auto;
 }
 .container{
-  // max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 15px;
-}
+  padding: 0 140px;
 
+}
+.section{
+  padding: 50px 0;
+}
 // .title{
 //     @extend %AlGrey-Bold;
 //     font-size: 36px;
@@ -38,3 +42,70 @@ body {
 //     margin-bottom: 56px;
 //     max-width: fit-content;
 // }
+.global-btn{
+  padding: 10px 30px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  color: $white;
+  transition: all .3s;
+  width: fit-content;
+  cursor: pointer;
+  &:hover{
+    background-color: $yellow;
+    color: $background;
+
+  }
+}
+
+
+
+.menu__btn {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+  // background-color: $white;
+  padding-top: 4px !important;
+  border-radius: 5px;
+  // border: 1px solid $white;
+  z-index: 3;
+
+  &.active {
+    .row {
+      height: 3px;
+    }
+
+    .row1 {
+      transform: rotate(45deg);
+      position: relative;
+      top: 8px;
+      background-color: $white;
+      transition: all .5s ease 0s;
+    }
+
+    .row2 {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -1px;
+      background-color: $white;
+      transition: all .5s ease 0s;
+    }
+
+    .row3 {
+      opacity: 0;
+    }
+  }
+}
+
+.row {
+  width: 25px;
+  background-color: $white;
+  height: 3px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  transition: all .3s;
+  margin: 6px auto;
+}
