@@ -1,3 +1,10 @@
+@media(max-width: 1600px) {
+  .adv__inner {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 @media(max-width: 1400px) {
   .header__logo {
     width: 50px;
@@ -5,6 +12,25 @@
 
   .menu-list+.menu-list {
     margin-left: 30px;
+  }
+
+  .adv__inner {
+    justify-content: center;
+  }
+
+  .adv__item {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .adv__item-numbers {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .adv__item-numbers__title {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -138,6 +164,20 @@
   }
 }
 
+@media(max-width: 800px) {
+  .adv__item-numbers {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .adv__item-numbers__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+
 @media(max-width: 700px) {
   .main__screen-title {
     font-size: 50px;
@@ -174,6 +214,17 @@
 
   .main-offer__text {
     font-size: 18px;
+  }
+
+  .adv__item-numbers {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .adv__item-numbers__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
   }
 }
 

@@ -252,4 +252,31 @@
 
 // end section main-offer
 
+
+// start section adv
+.adv__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px
+}
+
+.adv__item {
+  max-width: 520px;
+  width: 100%;
+}
+
+.adv__item-numbers {
+  font-size: 96px;
+  line-height: 96px;
+  color: $yellow;
+}
+
+.adv__item-numbers__title {
+  font-size: 40px;
+  color: $yellow;
+  margin-bottom: 30px;
+}
+
+// end section adv
+
 @import 'media';
