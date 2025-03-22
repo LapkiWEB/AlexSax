@@ -15,6 +15,31 @@
   left: 0;
   right: 0;
   z-index: 10;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #805c46 0%, #ffae3c 16.05%, #fff 30.44%, #ffae3c 45.68%, #805c46 100%);
+    z-index: -1;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #805c46 0%, #ffae3c 16.05%, #fff 30.44%, #ffae3c 45.68%, #805c46 100%);
+  }
+
+
 }
 
 .header__inner {
@@ -250,6 +275,10 @@
   font-size: 24px;
 }
 
+.main-offer__item__descr {
+  line-height: 22px;
+}
+
 // end section main-offer
 
 
@@ -277,6 +306,92 @@
   margin-bottom: 30px;
 }
 
+.adv__item-text {
+  line-height: 22px;
+}
+
 // end section adv
+
+// start section servises
+.servises__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.servises__item {
+  width: 25%;
+  height: 670px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 1s;
+  border: 1px solid transition;
+  background-size: 100% 100%;
+
+  &:hover {
+    border: 1px solid $yellow;
+    background-size: 110% 110%;
+
+    .servises__title {
+      color: $yellow;
+    }
+  }
+
+
+
+}
+
+.servises__item-shadow {
+  background: linear-gradient(180deg, #302221 0%, rgba(48, 34, 33, 0) 100%);
+  padding: 50px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.servises__title {
+  // max-width: 310px;
+  width: 100%;
+  // margin: 0 auto;
+  padding: 0 30px;
+  transition: all .3s;
+}
+
+.servises__btn {
+  margin: 0 auto;
+}
+
+// end section servises
+
+
+// start section spec
+.spec__inner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px
+}
+.spec__item{
+  width: 32%;
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid $white;
+}
+.spec__item-title{
+  color: $yellow;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.spec__item-text{
+  font-size: 18px;
+  line-height: 24px;
+}
+// end section spec
 
 @import 'media';
