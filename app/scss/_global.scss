@@ -10,6 +10,24 @@ body {
   background-color: $background;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  // background-color: $dark-blue;
+  position: relative;
+  // border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  // background-color: $green;
+  background: $yellow;
+
+  border-radius: 5px;
+  // border: 1px solid #000;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -42,12 +60,13 @@ body {
   padding: 50px 0;
 }
 
-.title{
-    font-size: 40px;
-    text-align: left;
-    margin-bottom: 50px;
-    max-width: fit-content;
+.title {
+  font-size: 40px;
+  text-align: left;
+  margin-bottom: 50px;
+  max-width: fit-content;
 }
+
 .global-btn {
   padding: 10px 30px;
   border: 1px solid $white;
@@ -116,4 +135,68 @@ body {
   margin-top: 6px;
   transition: all .3s;
   margin: 6px auto;
+}
+
+
+.global-reviews__wrapper {
+  position: relative;
+  // padding: 0 100px;
+  // max-width: 1200px;
+  // width: 100%;
+  // margin: 0 auto;
+
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 170px;
+  z-index: 1;
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 170px;
+  z-index: 1;
+}
+
+.slick-arrow {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  .arrow__wrapper {
+    img {
+      width: 30px;
+      height: 70px;
+    }
+  }
+}
+
+.slick-dots {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  button {
+    border: 1px solid $white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 20px 10px;
+    font-size: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    // box-shadow: inset 4px 4px 4px 0 rgba(78, 87, 94, 0.25), inset -4px -4px 4px 0 $yellow;
+
+  }
+}
+
+.slick-dots li[class="slick-active"] button {
+  background-color: $yellow;
+  // box-shadow: inset 4px 4px 4px 0 rgba(78, 87, 94, 0.25), inset -4px -4px 4px 0 $background
 }

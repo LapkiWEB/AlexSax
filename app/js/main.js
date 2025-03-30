@@ -34,5 +34,39 @@ $(function () {
 
   lightGallery(document.querySelector('.gallery'));
 
+  $('.reviews__inner').slick({
+    prevArrow: $('.global-reviews__wrapper .slick-prev'),
+    nextArrow: $('.global-reviews__wrapper .slick-next'),
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 800,
+    // fade: true,
+    dots: true,
+    arrows: true,
+    responsive: [{
+      breakpoint: 1001,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 701,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 701,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+      }
+    }
+    ]
+  });
+
+
 
 });
