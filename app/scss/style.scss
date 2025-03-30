@@ -589,11 +589,116 @@
   border-radius: 5px;
   margin-left: 20px;
 }
-.reviews__name{
+
+.reviews__name {
   font-size: 20px;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
 // end section reviews
+
+
+// start section feddpack
+.feedback {
+  // color: $black;
+  // background-color: $light-grey;
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  background-image: url('../images/content/feedback-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.feedback-shadow {
+  background-image: url('../images/content/feedback-bg-shadow.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .container {
+    max-width: 1920px;
+    width: 100%;
+  }
+}
+
+.feedback__inner {
+  // backdrop-filter: blur(10px);
+  // box-shadow: 3px 3px 5px 0 rgba(78, 87, 94, 0.25);
+  // background: linear-gradient(270deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 32.17%, rgba(255, 255, 255, 0.3) 100%);
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.feedback__title {
+  padding-top: 50px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.feedback__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+
+}
+
+.feedback__item {
+  max-width: 465px;
+  width: 100%;
+  margin: 0px 20px;
+}
+
+.feedback__items-input {
+  border: 1px solid $white;
+  background: rgba(48, 34, 33, 0.7);
+  color: $white;
+  padding: 25px 20px;
+  margin-bottom: 35px;
+  width: 100%;
+  font-size: 18px;
+  // @extend %BelR;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.feedback__items-textarea {
+  margin-bottom: 0;
+  height: 183px !important;
+  resize: none;
+}
+
+
+
+.feedback__btn {
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  border-radius: 5px;
+}
+
+// end section feddpack
+
+
+
 @import 'media';
