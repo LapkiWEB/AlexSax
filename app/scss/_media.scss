@@ -263,6 +263,16 @@
     height: fit-content;
   }
 
+  .header__logo.footer__logo {
+    margin-right: auto;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .footer__inner {
+    flex-wrap: wrap;
+  }
+
 }
 
 @media(max-width: 1200px) {
@@ -274,6 +284,20 @@
   .servises__item {
     width: 40%;
     height: 640px;
+  }
+
+  .footer__box {
+    max-width: 100%;
+  }
+
+  .footer__contacts {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer__contacts-phone {
+    margin-left: 0;
+    width: fit-content;
   }
 }
 
@@ -403,6 +427,15 @@
 
   .spec__item-text {
     font-size: 16px;
+  }
+
+  .footer__box {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .footer__item{
+    width: 100%;
+    margin-bottom: 0px;
   }
 }
 
