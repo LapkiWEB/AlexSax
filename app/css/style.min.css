@@ -378,6 +378,103 @@ body {
   background-color: #FFAE3C;
 }
 
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 34, 33, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: none;
+}
+.modal .feedback__items-input {
+  color: #F0E7E2;
+}
+.modal .feedback__items-input::-webkit-input-placeholder {
+  color: #F0E7E2;
+}
+.modal .feedback__items-input::-moz-placeholder {
+  color: #F0E7E2;
+}
+.modal .feedback__items-input:-ms-input-placeholder {
+  color: #F0E7E2;
+}
+.modal .feedback__items-input::-ms-input-placeholder {
+  color: #F0E7E2;
+}
+.modal .feedback__items-input::placeholder {
+  color: #F0E7E2;
+}
+
+.modal__inner {
+  width: 100%;
+}
+
+.modal__wrapper {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.modal__title {
+  position: relative;
+}
+
+.close__btn {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  cursor: pointer;
+}
+
+.close__line {
+  width: 30px;
+  background-color: #F0E7E2;
+  height: 3px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.close__line1 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 6px;
+}
+
+.close__line2 {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: -3px;
+}
+
+.show {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.modal__btn {
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  color: #F0E7E2;
+}
+
 @font-face {
   font-family: "Montserrat-Regular";
   src: url("../fonts/Montserrat-Regular.eot");
@@ -766,6 +863,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+.questions::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(48, 34, 33, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .questions__item {
@@ -780,6 +888,11 @@ body {
   transition: all 0.3s;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.questions__title {
+  position: relative;
+  z-index: 1;
 }
 
 .questions__item.main-btn {
@@ -978,17 +1091,13 @@ body {
   position: relative;
   min-height: 650px;
   overflow: hidden;
-  background-image: url("../images/content/feedback-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .feedback-shadow {
-  background-image: url("../images/content/feedback-bg-shadow.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: rgba(48, 34, 33, 0.6);
   position: absolute;
   top: 0;
   left: 0;
@@ -1091,9 +1200,17 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+.header__logo.footer__logo {
+  width: 207px;
+}
 .header__logo.footer__logo img {
+  width: 207px;
+  height: 67px;
   position: static;
 }
 
@@ -1182,6 +1299,30 @@ body {
   }
   .slick-next {
     right: 0px;
+  }
+  .footer__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .header__logo.footer__logo {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .footer__box {
+    max-width: 100%;
+  }
+  .footer__contacts {
+    width: 100%;
+    text-align: left;
+  }
+  .footer__contacts-phone {
+    margin-left: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @media (max-width: 1400px) {
@@ -1357,15 +1498,9 @@ body {
     height: fit-content;
   }
   .header__logo.footer__logo {
-    margin-right: auto;
-    width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  .footer__inner {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 @media (max-width: 1200px) {
@@ -1379,19 +1514,6 @@ body {
   .servises__item {
     width: 40%;
     height: 640px;
-  }
-  .footer__box {
-    max-width: 100%;
-  }
-  .footer__contacts {
-    width: 100%;
-    text-align: left;
-  }
-  .footer__contacts-phone {
-    margin-left: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
 }
 @media (max-width: 1000px) {
