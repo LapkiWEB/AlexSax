@@ -194,7 +194,7 @@
 
 // start section main__screen
 .main__screen {
-  background-image: url('../images/content/main-bg.jpg');
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -409,6 +409,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -783,6 +784,66 @@
 
 // end footer
 
+// start section sample__screen
+.sample__screen {
+  height: 600px;
+}
 
+.samplecontent {
+  background-color: $white;
+  color: $background;
+}
+
+// end section sample__screen
+
+// start section all-reviews
+.all-reviews__inner {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.all-reviews__item {
+  padding: 30px 50px;
+  background-color: $white;
+  color: $background;
+  border-radius: 5px;
+  width: 49%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  .reviews__text{
+    margin-bottom: 30px;
+  }
+  .reviews__img{
+    margin: 0 auto;
+    object-fit: contain;
+    height: fit-content;
+  }
+}
+
+// start section video-reviews
+.video-reviews{
+  background-color: $white;
+  color: $background;
+}
+.video-reviews__text{
+  margin-bottom: 30px;
+}
+.video-reviews__inner{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.video-reviews__item{
+  border-radius: 5px;
+  width: 31.6%;
+  img{
+    border-radius: 5px;
+  }
+}
+// end section all-reviews
 
 @import 'media';

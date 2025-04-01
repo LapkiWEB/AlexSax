@@ -233,6 +233,13 @@ body {
   padding: 0 140px;
 }
 
+.container-sample {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
 .container-fluid {
   max-width: 1920px;
   margin: 0 auto;
@@ -652,7 +659,6 @@ body {
 }
 
 .main__screen {
-  background-image: url("../images/content/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -1251,6 +1257,81 @@ body {
   margin-left: auto;
 }
 
+.sample__screen {
+  height: 600px;
+}
+
+.samplecontent {
+  background-color: #F0E7E2;
+  color: rgb(48, 34, 33);
+}
+
+.all-reviews__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.all-reviews__item {
+  padding: 30px 50px;
+  background-color: #F0E7E2;
+  color: rgb(48, 34, 33);
+  border-radius: 5px;
+  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.all-reviews__item .reviews__text {
+  margin-bottom: 30px;
+}
+.all-reviews__item .reviews__img {
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.video-reviews {
+  background-color: #F0E7E2;
+  color: rgb(48, 34, 33);
+}
+
+.video-reviews__text {
+  margin-bottom: 30px;
+}
+
+.video-reviews__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.video-reviews__item {
+  border-radius: 5px;
+  width: 31.6%;
+}
+.video-reviews__item img {
+  border-radius: 5px;
+}
+
 @media (max-width: 1800px) {
   .slick-prev {
     left: 100px;
@@ -1515,6 +1596,13 @@ body {
     width: 40%;
     height: 640px;
   }
+  .all-reviews__item {
+    width: 48%;
+    padding: 20px 30px;
+  }
+  .video-reviews__item {
+    width: 48%;
+  }
 }
 @media (max-width: 1000px) {
   .servises__inner {
@@ -1630,6 +1718,9 @@ body {
     width: 100%;
     margin-bottom: 0px;
   }
+  .all-reviews__item {
+    width: 100%;
+  }
 }
 @media (max-width: 750px) {
   .gallery__item-one {
@@ -1658,6 +1749,9 @@ body {
   .main__screen-subtitle {
     font-size: 50px;
     line-height: 50px;
+  }
+  .video-reviews__item {
+    width: 100%;
   }
 }
 @media (max-width: 650px) {
